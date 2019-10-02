@@ -10,17 +10,17 @@ import { Router } from '@angular/router';
 export class AppComponent {
   todoArray = [];
   info: Array<{ username: string, password: string }> = [{
-    username: 'Gayatri',
+    username: 'Rahul',
     password: '1234'
   },
   {
-    username: 'Amisha',
+    username: 'Girish',
     password: '5678'
   }];
 
 
 
-  addUser(un, pass) {
+  registerUser(un, pass) {
     if (un !== "" && pass != "") {
       this.info.push({ username: un, password: pass });
       console.log(un + " " + pass);
@@ -31,7 +31,7 @@ export class AppComponent {
 
   }
 
-  checkUser(un, pass) {
+  validateUser(un, pass) {
     if (un !== "" && pass != "") {
       var flag = 0;
       for (var i = 0; i < this.info.length; i++) {
